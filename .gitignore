@@ -1,0 +1,55 @@
+# Dart & Flutter - workspace .gitignore
+
+# Dart tooling
+.dart_tool/
+.packages
+.pub/
+pubspec.lock        # For libraries consider committing pubspec.lock; remove this line if you want to track it
+
+# Build outputs
+build/
+out/
+generated_plugin_registrant.dart
+flutter_export_environment.sh
+
+# Flutter specific
+.flutter-plugins
+.flutter-plugins-dependencies
+.flutter-versions
+
+# iOS / Android build artifacts (Flutter)
+**/ios/Pods/
+**/.gradle/
+**/android/.gradle/
+**/android/app/build/
+**/build/
+
+# Test & coverage
+coverage/
+.dart_tool/package_config.json
+*.lcov
+coverage.info
+test-results/
+
+# Generated JS / compiles
+*.dart.js
+*.js.deps
+*.js.map
+*.info.json
+*.dill
+
+# IDEs and editors
+.idea/
+*.iml
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs, temp
+*.log
+*.tmp
+*.swp

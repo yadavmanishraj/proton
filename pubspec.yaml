@@ -1,0 +1,22 @@
+name: _
+publish_to: none
+
+environment:
+  sdk: ^3.6.0
+
+workspace:
+  # Main app package
+  - app
+
+  # Feature packages
+  - feature/foryou
+  - feature/search
+  - feature/settings
+  - feature/tlibrary
+
+  # Core packages
+  - core/ui
+  - core/data
+  - core/model
+  - core/designsystem
+
