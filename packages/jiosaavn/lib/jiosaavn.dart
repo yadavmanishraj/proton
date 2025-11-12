@@ -3,6 +3,6 @@
 /// More dartdocs go here.
 library;
 
-export 'src/jiosaavn_base.dart';
+export 'src/jiosaavn_rest_api.dart';
 
 // TODO: Export any libraries intended for clients of this package.
