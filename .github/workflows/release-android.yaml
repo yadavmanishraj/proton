@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - release
+  workflow_dispatch:
 
 jobs:
   buildApp:
@@ -17,6 +18,4 @@ jobs:
       - name: Flutter Doctor
         run: flutter doctor -v
       - run: flutter pub get
-      - run: cd app
-      - run: flutter build apk --release
-      
+      - run: cd app && flutter build apk --release
