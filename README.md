@@ -1,4 +1,4 @@
-> ⚠️ **WARNING**
+> [!WARNING]
 >
 > This repository is provided solely for educational purposes. Do not use the code, examples, or data to harm people, violate privacy, break the law, or exploit systems.
 >
