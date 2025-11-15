@@ -22,4 +22,5 @@ workspace:
   - core/data
   - core/model
   - core/designsystem
+  - core/preferences
 
