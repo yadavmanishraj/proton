@@ -23,6 +23,7 @@ workspace:
   - core/model
   - core/designsystem
   - core/preferences
+  - core/di
 
 dev_dependencies:
   melos: ^7.3.0
