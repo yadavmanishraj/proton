@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:photon/di/configure_di.dart';
 
 void main() {
+  configureDependencyInjection();
   runApp(const MyApp());
 }
 
