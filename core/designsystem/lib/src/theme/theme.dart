@@ -32,7 +32,9 @@ const ColorScheme lightDefaultColorScheme = ColorScheme.light(
   onBackground: darkPurpleGray10,
   surface: darkPurpleGray99,
   onSurface: darkPurpleGray10,
-  surfaceVariant: purpleGray90,
+  surfaceVariant:
+      purpleGray90, // deprecated use surfaceContainerHighest instead
+  surfaceContainerHighest: purpleGray90,
   onSurfaceVariant: purpleGray30,
   inverseSurface: darkPurpleGray20,
   onInverseSurface: darkPurpleGray95,
@@ -61,6 +63,7 @@ const ColorScheme darkDefaultColorScheme = ColorScheme.dark(
   surface: darkPurpleGray10,
   onSurface: darkPurpleGray90,
   surfaceVariant: purpleGray30,
+  surfaceContainerHighest: purpleGray30,
   onSurfaceVariant: purpleGray80,
   inverseSurface: darkPurpleGray90,
   onInverseSurface: darkPurpleGray10,
