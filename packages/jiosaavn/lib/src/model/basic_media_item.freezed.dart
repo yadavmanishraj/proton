@@ -16,7 +16,7 @@ T _$identity<T>(T value) => value;
 mixin _$BasicMediaItem {
 
  String? get id; String? get title; String? get subtitle; String? get image;@JsonKey(name: 'perma_url') String? get permaUrl;// this is temporary, ideally we should have separate classes for different media types
- MediaItemType? get type;@JsonKey(name: 'secondary_subtitle') String? get secondarySubtitle;@ExplicitValueConverter()@JsonKey(name: "explicit_content") bool get explicitContent;@JsonKey(name: "mini_obj") bool get miniObj;
+ String? get type;@JsonKey(name: 'secondary_subtitle') String? get secondarySubtitle;@ExplicitValueConverter()@JsonKey(name: "explicit_content") bool get explicitContent;@JsonKey(name: "mini_obj") bool get miniObj;
 /// Create a copy of BasicMediaItem
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -49,7 +49,7 @@ abstract mixin class $BasicMediaItemCopyWith<$Res>  {
   factory $BasicMediaItemCopyWith(BasicMediaItem value, $Res Function(BasicMediaItem) _then) = _$BasicMediaItemCopyWithImpl;
 @useResult
 $Res call({
- String? id, String? title, String? subtitle, String? image,@JsonKey(name: 'perma_url') String? permaUrl, MediaItemType? type,@JsonKey(name: 'secondary_subtitle') String? secondarySubtitle,@ExplicitValueConverter()@JsonKey(name: "explicit_content") bool explicitContent,@JsonKey(name: "mini_obj") bool miniObj
+ String? id, String? title, String? subtitle, String? image,@JsonKey(name: 'perma_url') String? permaUrl, String? type,@JsonKey(name: 'secondary_subtitle') String? secondarySubtitle,@ExplicitValueConverter()@JsonKey(name: "explicit_content") bool explicitContent,@JsonKey(name: "mini_obj") bool miniObj
 });
 
 
@@ -74,7 +74,7 @@ as String?,subtitle: freezed == subtitle ? _self.subtitle : subtitle // ignore: 
 as String?,image: freezed == image ? _self.image : image // ignore: cast_nullable_to_non_nullable
 as String?,permaUrl: freezed == permaUrl ? _self.permaUrl : permaUrl // ignore: cast_nullable_to_non_nullable
 as String?,type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
-as MediaItemType?,secondarySubtitle: freezed == secondarySubtitle ? _self.secondarySubtitle : secondarySubtitle // ignore: cast_nullable_to_non_nullable
+as String?,secondarySubtitle: freezed == secondarySubtitle ? _self.secondarySubtitle : secondarySubtitle // ignore: cast_nullable_to_non_nullable
 as String?,explicitContent: null == explicitContent ? _self.explicitContent : explicitContent // ignore: cast_nullable_to_non_nullable
 as bool,miniObj: null == miniObj ? _self.miniObj : miniObj // ignore: cast_nullable_to_non_nullable
 as bool,
@@ -162,7 +162,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? id,  String? title,  String? subtitle,  String? image, @JsonKey(name: 'perma_url')  String? permaUrl,  MediaItemType? type, @JsonKey(name: 'secondary_subtitle')  String? secondarySubtitle, @ExplicitValueConverter()@JsonKey(name: "explicit_content")  bool explicitContent, @JsonKey(name: "mini_obj")  bool miniObj)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? id,  String? title,  String? subtitle,  String? image, @JsonKey(name: 'perma_url')  String? permaUrl,  String? type, @JsonKey(name: 'secondary_subtitle')  String? secondarySubtitle, @ExplicitValueConverter()@JsonKey(name: "explicit_content")  bool explicitContent, @JsonKey(name: "mini_obj")  bool miniObj)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _BasicMediaItem() when $default != null:
 return $default(_that.id,_that.title,_that.subtitle,_that.image,_that.permaUrl,_that.type,_that.secondarySubtitle,_that.explicitContent,_that.miniObj);case _:
@@ -183,7 +183,7 @@ return $default(_that.id,_that.title,_that.subtitle,_that.image,_that.permaUrl,_
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? id,  String? title,  String? subtitle,  String? image, @JsonKey(name: 'perma_url')  String? permaUrl,  MediaItemType? type, @JsonKey(name: 'secondary_subtitle')  String? secondarySubtitle, @ExplicitValueConverter()@JsonKey(name: "explicit_content")  bool explicitContent, @JsonKey(name: "mini_obj")  bool miniObj)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? id,  String? title,  String? subtitle,  String? image, @JsonKey(name: 'perma_url')  String? permaUrl,  String? type, @JsonKey(name: 'secondary_subtitle')  String? secondarySubtitle, @ExplicitValueConverter()@JsonKey(name: "explicit_content")  bool explicitContent, @JsonKey(name: "mini_obj")  bool miniObj)  $default,) {final _that = this;
 switch (_that) {
 case _BasicMediaItem():
 return $default(_that.id,_that.title,_that.subtitle,_that.image,_that.permaUrl,_that.type,_that.secondarySubtitle,_that.explicitContent,_that.miniObj);case _:
@@ -203,7 +203,7 @@ return $default(_that.id,_that.title,_that.subtitle,_that.image,_that.permaUrl,_
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? id,  String? title,  String? subtitle,  String? image, @JsonKey(name: 'perma_url')  String? permaUrl,  MediaItemType? type, @JsonKey(name: 'secondary_subtitle')  String? secondarySubtitle, @ExplicitValueConverter()@JsonKey(name: "explicit_content")  bool explicitContent, @JsonKey(name: "mini_obj")  bool miniObj)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? id,  String? title,  String? subtitle,  String? image, @JsonKey(name: 'perma_url')  String? permaUrl,  String? type, @JsonKey(name: 'secondary_subtitle')  String? secondarySubtitle, @ExplicitValueConverter()@JsonKey(name: "explicit_content")  bool explicitContent, @JsonKey(name: "mini_obj")  bool miniObj)?  $default,) {final _that = this;
 switch (_that) {
 case _BasicMediaItem() when $default != null:
 return $default(_that.id,_that.title,_that.subtitle,_that.image,_that.permaUrl,_that.type,_that.secondarySubtitle,_that.explicitContent,_that.miniObj);case _:
@@ -227,7 +227,7 @@ class _BasicMediaItem implements BasicMediaItem {
 @override final  String? image;
 @override@JsonKey(name: 'perma_url') final  String? permaUrl;
 // this is temporary, ideally we should have separate classes for different media types
-@override final  MediaItemType? type;
+@override final  String? type;
 @override@JsonKey(name: 'secondary_subtitle') final  String? secondarySubtitle;
 @override@ExplicitValueConverter()@JsonKey(name: "explicit_content") final  bool explicitContent;
 @override@JsonKey(name: "mini_obj") final  bool miniObj;
@@ -265,7 +265,7 @@ abstract mixin class _$BasicMediaItemCopyWith<$Res> implements $BasicMediaItemCo
   factory _$BasicMediaItemCopyWith(_BasicMediaItem value, $Res Function(_BasicMediaItem) _then) = __$BasicMediaItemCopyWithImpl;
 @override @useResult
 $Res call({
- String? id, String? title, String? subtitle, String? image,@JsonKey(name: 'perma_url') String? permaUrl, MediaItemType? type,@JsonKey(name: 'secondary_subtitle') String? secondarySubtitle,@ExplicitValueConverter()@JsonKey(name: "explicit_content") bool explicitContent,@JsonKey(name: "mini_obj") bool miniObj
+ String? id, String? title, String? subtitle, String? image,@JsonKey(name: 'perma_url') String? permaUrl, String? type,@JsonKey(name: 'secondary_subtitle') String? secondarySubtitle,@ExplicitValueConverter()@JsonKey(name: "explicit_content") bool explicitContent,@JsonKey(name: "mini_obj") bool miniObj
 });
 
 
@@ -290,7 +290,7 @@ as String?,subtitle: freezed == subtitle ? _self.subtitle : subtitle // ignore: 
 as String?,image: freezed == image ? _self.image : image // ignore: cast_nullable_to_non_nullable
 as String?,permaUrl: freezed == permaUrl ? _self.permaUrl : permaUrl // ignore: cast_nullable_to_non_nullable
 as String?,type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
-as MediaItemType?,secondarySubtitle: freezed == secondarySubtitle ? _self.secondarySubtitle : secondarySubtitle // ignore: cast_nullable_to_non_nullable
+as String?,secondarySubtitle: freezed == secondarySubtitle ? _self.secondarySubtitle : secondarySubtitle // ignore: cast_nullable_to_non_nullable
 as String?,explicitContent: null == explicitContent ? _self.explicitContent : explicitContent // ignore: cast_nullable_to_non_nullable
 as bool,miniObj: null == miniObj ? _self.miniObj : miniObj // ignore: cast_nullable_to_non_nullable
 as bool,

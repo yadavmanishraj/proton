@@ -1,7 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import 'core.dart';
-
 part 'basic_media_item.g.dart';
 part 'basic_media_item.freezed.dart';
 
@@ -16,7 +14,7 @@ abstract class BasicMediaItem with _$BasicMediaItem {
     @JsonKey(name: 'perma_url') String? permaUrl,
 
     // this is temporary, ideally we should have separate classes for different media types
-    MediaItemType? type,
+    String? type,
     @JsonKey(name: 'secondary_subtitle') String? secondarySubtitle,
 
     @ExplicitValueConverter()

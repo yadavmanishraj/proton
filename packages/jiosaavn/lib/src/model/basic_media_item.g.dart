@@ -13,7 +13,7 @@ _BasicMediaItem _$BasicMediaItemFromJson(Map<String, dynamic> json) =>
       subtitle: json['subtitle'] as String?,
       image: json['image'] as String?,
       permaUrl: json['perma_url'] as String?,
-      type: $enumDecodeNullable(_$MediaItemTypeEnumMap, json['type']),
+      type: json['type'] as String?,
       secondarySubtitle: json['secondary_subtitle'] as String?,
       explicitContent: json['explicit_content'] == null
           ? false
@@ -30,19 +30,10 @@ Map<String, dynamic> _$BasicMediaItemToJson(_BasicMediaItem instance) =>
       'subtitle': instance.subtitle,
       'image': instance.image,
       'perma_url': instance.permaUrl,
-      'type': _$MediaItemTypeEnumMap[instance.type],
+      'type': instance.type,
       'secondary_subtitle': instance.secondarySubtitle,
       'explicit_content': const ExplicitValueConverter().toJson(
         instance.explicitContent,
       ),
       'mini_obj': instance.miniObj,
     };
-
-const _$MediaItemTypeEnumMap = {
-  MediaItemType.playlist: 'playlist',
-  MediaItemType.album: 'album',
-  MediaItemType.song: 'song',
-  MediaItemType.artist: 'artist',
-  MediaItemType.podcast: 'podcast',
-  MediaItemType.radioStation: 'radio_station',
-};
